@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+body, input, textarea, button { font-family: Poppins !important; }
+.pointer { cursor: pointer; }
+.navbar {
+    display: flex;
+    padding: 15px 5%;
+}
+.navbar-links { list-style: none; }
+.navbar-links li { display: inline-block; }
+.navbar-links li a {
+    text-decoration: none;
+    float: left;
+    color: #6b7280;
+    padding: 5px 10px;
+    transition: all .3s ease;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: none;
+}
+.navbar-links li a:hover,
+.navbar-links li a.active, .active {
+    color: #0058ff;
+}
+
+.logo { 
+    width: 85px; 
+    height: 60px
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    right: 20px;
+    top: 65px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.icon { 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+}
+.wrapper {
+    width: 100%;
+    margin: 0;
+}
+.main-heading {
+    margin: auto;
+    font-size: 35px;
+    line-height: 30px;
+    text-align: center;
+}
+.info-text {
+    padding: 10px;
+    margin: auto;
+    margin-top: 0.1rem;
+    font-size: 12px;
+    line-height: 13px;
+    color: #6b7280;
+    width: 80%;
+}
+.grid-cols-2 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+}
+.grid-item-1 {
+    padding-top: 5rem;
+    /* padding-left: 1.5rem; */
+    text-align: center;
+    /* margin: 0; */
+}
+.grid-item-2 {
+    width: 100%;
+    height: 100%;
+}
+.btn-wrapper {
+    margin-top: 0.5rem;
+    /* display: flex; */
+    width: 100%;
+}
+.btn {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    margin: 1px 5px;
+    border: 0;
+}
+.btn-active {
+    background: #0058ff;
+    color: white;
+}
+.recent-leads {
+    background: #e5edff;
+    color: #0058ff;
+}
+
+@media only screen and (min-width: 600px) {
+    .logo {
+        width: 65px;
+        height: 40px;
+    }
+    .icon { display: none; }
+    .navbar-links li a {
+        display: block;
+    }
+    .main-heading {
+        font-size: 55px;
+        line-height: 50px;
+    }
+    .info-text {
+        margin-top: 1.1rem;
+        font-size: 22px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .logo {
+        width: 100px;
+        height: 75px;
+    }
+    .navbar-links li a {
+        padding: 15px 35px;
+        font-size: 20px;
+    }
+    .wrapper { width: 100vh; }
+    .background {
+        clip-path: polygon(67% 0, 100% 0, 100% 100%, 54% 100%);
+        background-image: url('../img/bg.jpg');
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        margin: 0;
+        z-index: -1;
+    }
+    .main-heading {
+        width: 80%;
+        font-size: 62px;
+        line-height: 62px;
+        text-align: left;
+        padding: 30px;
+    }
+    .info-text {
+        text-align: left;
+        margin-top: -1rem;
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .grid-item-1 {
+        padding-top: 7rem;
+        text-align: left;
+    }
+    .btn-wrapper {
+        /* display: flex; */
+        width: 50%;
+        padding: 10px;
+        /* margin: 0; */
+        margin-left: 60px;
+    }
+    .btn {
+        font-size: 15px;
+        padding: 15px 25px;
+    }
+}
